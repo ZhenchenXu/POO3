@@ -40,17 +40,28 @@ class NPC():
         print(str(self.PDV))
         print(str(self.Profession))
 
-class kobold(NPC):
+class Kobold(NPC):
     def __init__(self):
         super().__init__()
     def attaquer(self, cible):
         pass
     def subir_dommage(self, dommage):
-        pass
+        self.PDV -= dommage
 class Heros(NPC):
     def __init__(self):
         super().__init__()
     def attaquer(self, cible):
-        pass
+        attaque = random.randint(1,20)
+        if attaque == 20:
+            a_strength = random.randint(1,8)
+        elif attaque > 1:
+            if attaque > cible.Armour:
+                a_strength = random.randint(1,6)
+                cible.subir_dommage(a_strength)
+            else:
+                pass
+        else:
+            pass
+
     def subir_dommage(self, dommage):
         pass
