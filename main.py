@@ -59,10 +59,7 @@ class Heros(NPC):
             if attaque > cible.Armour:
                 a_strength = random.randint(1,6)
                 cible.subir_dommage(a_strength)
-            else:
-                pass
-        else:
-            pass
+
 
     def subir_dommage(self, dommage):
         pass
