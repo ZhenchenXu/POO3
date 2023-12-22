@@ -54,6 +54,7 @@ class Heros(NPC):
         attaque = random.randint(1,20)
         if attaque == 20:
             a_strength = random.randint(1,8)
+            cible.subir_dommage(a_strength)
         elif attaque > 1:
             if attaque > cible.Armour:
                 a_strength = random.randint(1,6)
